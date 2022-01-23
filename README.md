@@ -6,6 +6,14 @@
 ### Cloud Deployment:
 https://web-quiz-engine.azurewebsites.net/
 
+### User:
+<pre>
+{
+  "email": "test@gmail.com",
+  "password": "secret"
+}
+</pre>
+
 ### Quiz:
 <pre>
 {  
@@ -16,13 +24,13 @@ https://web-quiz-engine.azurewebsites.net/
 }
 </pre>
 
-
 ### Routes:
 <pre>
 GET /api/quizzes  
 GET /api/quizzes/{id}  
 GET /api/quizzes/completed  
 
+POST /api/register
 POST /api/quizzes  
 POST /api/quizzes/{id}/solve  
 
