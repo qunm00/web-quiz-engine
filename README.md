@@ -38,3 +38,4 @@ DELETE /api/quizzes/{id}
 </pre>
 
 ### Need improvement:
+- Better response if email or password are invalid
