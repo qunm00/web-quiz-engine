@@ -58,10 +58,9 @@ public class QuizService {
 
     public Response checkAnswer(long id, List<Integer> answer, User user) {
         Quiz quiz = this.getId(id);
-        System.out.println("QuizService -> checkAnswer " + quiz);
-        System.out.println("QuizService -> checkAnswer " + answer);
-        System.out.println("QuizService -> checkAnswer " + user);
-        // why doesn't quiz.getAnswer().equals(answer) work?
+//        System.out.println("QuizService -> checkAnswer " + quiz);
+//        System.out.println("QuizService -> checkAnswer " + answer);
+//        System.out.println("QuizService -> checkAnswer " + user);
         if (answer.equals(quiz.getAnswer())) {
             Completion newAnswer = new Completion();
 //            newAnswer.setAnswer(answer);

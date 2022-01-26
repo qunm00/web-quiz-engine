@@ -12,20 +12,22 @@ public class Quiz {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @NotNull
-    @NotBlank
+    @NotNull(message="title can't be empty")
+    @NotBlank(message="title can't be empty")
     private String title;
 
-    @NotNull
-    @NotBlank
+    @NotNull(message="question can't be empty")
+    @NotBlank(message="question can't be empty")
     private String text;
 
-    @NotNull
-    @Size(min = 2)
+    @NotNull(message="possible answers can't be empty")
+    @Size(min = 2, message="there must be at least 2 possible answers")
     @ElementCollection
     private List<String> options;
 
     @ElementCollection
+    @NotNull(message="there must be an answer")
+    @Size(min = 1, message="there must be an answer")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private List<Integer> answer;
 

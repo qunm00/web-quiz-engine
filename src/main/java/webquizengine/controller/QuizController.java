@@ -52,7 +52,7 @@ public class QuizController {
         this.quizService.delete(id, user);
     }
 
-    @GetMapping("api/quizzes/completed")
+    @GetMapping("/api/quizzes/completed")
     public Page<Completion> getAllCompletion(
             @AuthenticationPrincipal User user,
             @RequestParam(defaultValue = "0") Integer page,

@@ -24,7 +24,10 @@ public class UserService implements UserDetailsService {
 
     public void save(User user) {
         if (this.userRepository.existsById(user.getUsername())) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
+            throw new ResponseStatusException(
+                    HttpStatus.BAD_REQUEST,
+                    "user already registered"
+            );
         }
         user.setPassword(securityConfiguration.getEncoder().encode(user.getPassword()));
         this.userRepository.save(user);

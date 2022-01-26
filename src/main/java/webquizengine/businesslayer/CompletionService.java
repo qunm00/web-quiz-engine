@@ -15,7 +15,7 @@ public class CompletionService {
     @Autowired CompletionRepository completionRepository;
 
     public Page<Completion> getAllCompletion(User user, Integer page, Integer pageSize) {
-        System.out.println("Completion Service -> getAllCompletion " + user);
+//        System.out.println("Completion Service -> getAllCompletion " + user);
         Pageable paging = PageRequest.of(page, pageSize, Sort.by(Sort.Direction.DESC, "completedAt"));
         Page<Completion> pageResult = this.completionRepository.findAllByUser(user, paging);
 //        Page<Completion> pageResult = this.completionRepository.findAll(paging);
