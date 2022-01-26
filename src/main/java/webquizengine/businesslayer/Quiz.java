@@ -26,8 +26,8 @@ public class Quiz {
     private List<String> options;
 
     @ElementCollection
-    @NotNull(message="there must be an answer")
-    @Size(min = 1, message="there must be an answer")
+    @NotNull(message="there must be at least 1 correct answer")
+    @Size(min = 1, message="there must be at least 1 correct answer")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private List<Integer> answer;
 
