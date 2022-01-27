@@ -39,6 +39,7 @@ DELETE /api/quizzes/{id}
 
 
 ### Sample requests:
+<pre>
 curl -X POST https://web-quiz-engine.azurewebsites.net/api/register \
      -H 'Content-Type: application/json' \
      -d '{
@@ -73,5 +74,8 @@ curl -X POST https://web-quiz-engine.azurewebsites.net/api/quizzes/completed \
 
 curl -X DELETE https://web-quiz-engine.azurewebsites.net/api/quizzes/1 \
      -u 'newuser@mail.com:12345'
+</pre>
 
-
+### Needs Improvement:
+- Quiz's type check exception. Currently using `handleHttpMessageNotReadable`.
+- Quiz's answer validation. Answer integer isn't in the range of answer's options.
