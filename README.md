@@ -20,7 +20,7 @@ https://web-quiz-engine.azurewebsites.net/
   "title": "The Java Logo",  
   "text": "What is depicted on the Java logo?",  
   "options": ["Robot","Tea leaf","Cup of coffee","Bug"]  
-  "answers" : 2  
+  "answers" : [2]
 }
 </pre>
 
@@ -39,3 +39,39 @@ DELETE /api/quizzes/{id}
 
 
 ### Sample requests:
+curl -X POST https://web-quiz-engine.azurewebsites.net/api/register \
+     -H 'Content-Type: application/json' \
+     -d '{
+          "email": "newuser@mail.com",
+          "password": "12345"
+        }'
+
+curl -X POST https://web-quiz-engine.azurewebsites.net/api/quizzes \
+     -H 'Content-Type: application/json' \
+     -u 'newuser@mail.com:12345' \
+     -d '{
+           "title": "The Java Logo",
+           "text": "What is depicted on the Java logo?",
+           "options": ["Robot","Tea leaf","Cup of coffee","Bug"]
+         }'
+
+curl -X GET https://web-quiz-engine.azurewebsites.net/api/quizzes \
+     -u 'newuser@mail.com:12345'
+
+curl -X GET https://web-quiz-engine.azurewebsites.net/api/quizzes/1 \
+     -u 'newuser@mail.com:12345'
+
+curl -X POST https://web-quiz-engine.azurewebsites.net/1/solve \
+     -H 'Content-Type: application/json' \
+     -u 'newuser@mail.com:12345' \
+     -d '{
+           "answer": [2]
+         }'
+
+curl -X POST https://web-quiz-engine.azurewebsites.net/api/quizzes/completed \
+     -u 'newuser@mail.com:12345'
+
+curl -X DELETE https://web-quiz-engine.azurewebsites.net/api/quizzes/1 \
+     -u 'newuser@mail.com:12345'
+
+
