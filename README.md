@@ -59,6 +59,9 @@ curl -X POST https://web-quiz-engine.azurewebsites.net/api/quizzes \
 
 curl -X GET https://web-quiz-engine.azurewebsites.net/api/quizzes \
      -u 'newuser@mail.com:12345'
+     
+curl -X GET https://web-quiz-engine.azurewebsites.net/api/quizzes/?page=0&size=5 \
+     -u 'newuser@mail.com:12345'     
 
 curl -X GET https://web-quiz-engine.azurewebsites.net/api/quizzes/1 \
      -u 'newuser@mail.com:12345'
