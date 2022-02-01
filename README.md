@@ -63,7 +63,7 @@ curl -X GET https://web-quiz-engine.azurewebsites.net/api/quizzes \
 curl -X GET https://web-quiz-engine.azurewebsites.net/api/quizzes/1 \
      -u 'newuser@mail.com:12345'
 
-curl -X POST https://web-quiz-engine.azurewebsites.net/1/solve \
+curl -X POST https://web-quiz-engine.azurewebsites.net/api/quizzes/1/solve \
      -H 'Content-Type: application/json' \
      -u 'newuser@mail.com:12345' \
      -d '{
