@@ -53,7 +53,8 @@ curl -X POST https://web-quiz-engine.azurewebsites.net/api/quizzes \
      -d '{
            "title": "The Java Logo",
            "text": "What is depicted on the Java logo?",
-           "options": ["Robot","Tea leaf","Cup of coffee","Bug"]
+           "options": ["Robot","Tea leaf","Cup of coffee","Bug"],
+           "answers": [2]
          }'
 
 curl -X GET https://web-quiz-engine.azurewebsites.net/api/quizzes \
