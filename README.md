@@ -20,7 +20,7 @@ https://web-quiz-engine.azurewebsites.net/
   "title": "The Java Logo",  
   "text": "What is depicted on the Java logo?",  
   "options": ["Robot","Tea leaf","Cup of coffee","Bug"]  
-  "answers" : [2]
+  "answer" : [2]
 }
 </pre>
 
@@ -54,7 +54,7 @@ curl -X POST https://web-quiz-engine.azurewebsites.net/api/quizzes \
            "title": "The Java Logo",
            "text": "What is depicted on the Java logo?",
            "options": ["Robot","Tea leaf","Cup of coffee","Bug"],
-           "answers": [2]
+           "answer": [2]
          }'
 
 curl -X GET https://web-quiz-engine.azurewebsites.net/api/quizzes \
