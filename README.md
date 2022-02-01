@@ -75,6 +75,9 @@ curl -X POST https://web-quiz-engine.azurewebsites.net/api/quizzes/1/solve \
 
 curl -X GET https://web-quiz-engine.azurewebsites.net/api/quizzes/completed \
      -u 'newuser@mail.com:12345'
+     
+curl -X GET https://web-quiz-engine.azurewebsites.net/api/quizzes/completed?page=0&pageSize=2 \
+     -u 'newuser@mail.com:12345'     
 
 curl -X DELETE https://web-quiz-engine.azurewebsites.net/api/quizzes/1 \
      -u 'newuser@mail.com:12345'
